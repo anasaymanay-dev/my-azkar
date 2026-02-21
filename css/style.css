@@ -77,12 +77,12 @@ h1 {
 }
 @media (max-width: 768px) {
     .child {
-        width: 85%;
+        width: 80%;
     }
     h1 {
         font-size: 20px;
     }
     .child h2 {
-        font-size: 18px;
+        font-size: 20px;
     }
 }
