@@ -1,0 +1,88 @@
+:root {
+    --body-bg: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    --text-color: #ffffff;
+    --card-bg: rgba(255, 255, 255, 0.08);
+    --card-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    --inc-bg: linear-gradient(45deg, #00c853, #64dd17);
+    --inc-hover-shadow: rgba(0, 200, 83, 0.6);
+    --reset-bg: linear-gradient(45deg, #d50000, #ff5252);
+    --reset-hover-shadow: rgba(213, 0, 0, 0.6);
+    --border-radius: 15px;
+    --button-radius: 30px;
+}
+body {
+    margin: 0;
+    font-family: "Cairo", sans-serif;
+    background: var(--body-bg);
+    color: var(--text-color);
+}
+h1 {
+    text-align: center;
+    margin: 40px 20px;
+    line-height: 1.8;
+    font-size: 26px;
+    color: var(--text-color);
+}
+.parent {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding-bottom: 40px;
+}
+.child {
+    width: 55%;
+    margin: auto;
+    padding: 25px;
+    text-align: center;
+    border-radius: var(--border-radius);
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--card-shadow);
+    transition: 0.3s;
+}
+.child:hover {
+    transform: translateY(-5px);
+}
+.child h2 {
+    margin-bottom: 15px;
+    font-size: 25px;
+    color: var(--text-color);
+}
+.child button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: var(--button-radius);
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+    color: var(--text-color);
+}
+.inc {
+    background: var(--inc-bg);
+}
+.inc:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px var(--inc-hover-shadow);
+}
+.reset {
+    background: var(--reset-bg);
+}
+.reset:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px var(--reset-hover-shadow);
+}
+@media (max-width: 768px) {
+    .child {
+        width: 85%;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    .child h2 {
+        font-size: 18px;
+    }
+}
